@@ -1,11 +1,4 @@
-# MySQL query statement below
-
-SELECT Person.FirstName, Person.LastName
+# Write your MySQL query statement below
+SELECT Person.FirstName, Person.LastName, Address.City, Address.State
 FROM Person
-LEFT OUTER JOIN Address ON Person.PersonId=Address.PersonId
-
-UNION
-
-SELECT Address.City, Address.State
-FROM Person
-RIGHT OUTER JOIN Address ON Person.PersonId=Address.PersonId;
+LEFT OUTER JOIN Address ON Person.PersonId=Address.PersonId;
